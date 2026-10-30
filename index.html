@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0b0c">
+<title>Agenda do barbeiro · Referência Barber Club</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar">
+  <div class="brand"><img src="img/logo-r.jpg" alt="Logo Referência"><div><b>REFERÊNCIA</b><small>Barber Club</small></div></div>
+  <div class="nav-label">Menu principal</div>
+  <nav class="nav"><a href="#agenda" class="active"><span class="nav-icon">▦</span>Agenda</a><a href="#resumo" data-demo="Caixa"><span class="nav-icon">◈</span>Caixa</a><a href="#equipe" data-demo="Equipe"><span class="nav-icon">♙</span>Equipe</a></nav>
+  <div class="sidebar-foot"><div class="user"><img class="avatar" src="img/matheus-avatar.jpg" alt=""><div><b>Matheus</b><small>Barbeiro · Referência</small></div></div></div>
+</aside>
+<main class="main" id="agenda">
+  <div class="mobile-brand"><img src="img/logo-r.jpg" alt=""><div><b>REFERÊNCIA</b><small>Barber Club</small></div></div>
+  <header class="topline"><div><div class="eyebrow">Painel do barbeiro</div><h1 class="title">Agenda</h1></div><div class="top-actions"><button class="icon-btn" id="prev" aria-label="Dia anterior">‹</button><div class="date-label"><strong id="dateLong"></strong><span id="dateShort"></span></div><button class="icon-btn" id="next" aria-label="Próximo dia">›</button><button class="today-btn" id="today">Hoje</button></div></header>
+  <section class="stats" aria-label="Resumo do dia"><div class="stat"><div class="stat-label">Agendamentos</div><div class="stat-line"><span class="stat-value" id="count">0</span><span class="stat-hint">neste dia</span></div></div><div class="stat"><div class="stat-label">Próximo horário</div><div class="stat-line"><span class="stat-value" id="upcoming">—</span><span class="stat-hint">na agenda</span></div></div><div class="stat"><div class="stat-label">Previsão do dia</div><div class="stat-line"><span class="stat-value" id="total">R$ 0</span><span class="stat-hint">em serviços</span></div></div></section>
+  <div class="section-head"><div><h2>Atendimentos do dia</h2><p id="subhead">Confira os próximos cortes e serviços marcados.</p></div><div class="filters">
+<div class="custom-select" data-filter="barber" data-value="Todos"><button class="select-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Filtrar barbeiro"><span>Todos os barbeiros</span><i>⌄</i></button><div class="select-menu" role="listbox" aria-label="Barbeiro"><button class="select-option selected" type="button" role="option" aria-selected="true" data-value="Todos">Todos os barbeiros</button><button class="select-option" type="button" role="option" aria-selected="false" data-value="Matheus">Matheus</button><button class="select-option" type="button" role="option" aria-selected="false" data-value="Renan">Renan</button></div></div>
+<div class="custom-select" data-filter="status" data-value="Todos"><button class="select-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Filtrar situação"><span>Todos os status</span><i>⌄</i></button><div class="select-menu" role="listbox" aria-label="Situação"><button class="select-option selected" type="button" role="option" aria-selected="true" data-value="Todos">Todos os status</button><button class="select-option" type="button" role="option" aria-selected="false" data-value="Agendado">Agendado</button><button class="select-option" type="button" role="option" aria-selected="false" data-value="Em atendimento">Em atendimento</button><button class="select-option" type="button" role="option" aria-selected="false" data-value="Concluído">Concluído</button><button class="select-option" type="button" role="option" aria-selected="false" data-value="Faltou">Faltou</button></div></div>
+</div></div>
+  <div class="content"><section class="timeline"><div class="timeline-head"><b id="timelineTitle">HORÁRIOS</b><span>Horário local da barbearia</span></div><div id="list"></div></section><aside class="aside"><div class="side-card" id="equipe"><h3 class="side-title">Equipe hoje</h3><div id="team"></div></div><div class="side-card"><h3 class="side-title">Visão rápida</h3><div class="note"><strong>Agenda do dia</strong><br>Veja quem vem, o horário de cada atendimento e os serviços reservados.<br><br>Esta é uma demonstração visual com dados fictícios. Os filtros e a navegação por dia funcionam nesta página.</div></div></aside></div>
+</main>
+</div>
+<nav class="mobile-bottom"><a class="active" href="#agenda"><i>▦</i>Agenda</a><a href="#resumo" data-demo="Caixa"><i>◈</i>Caixa</a><a href="#equipe" data-demo="Equipe"><i>♙</i>Equipe</a></nav>
+<div class="toast" id="toast"></div>
+<script src="script.js" defer></script>
+</body>
+</html>
+
+
+
